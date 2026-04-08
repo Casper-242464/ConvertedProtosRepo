@@ -80,18 +80,18 @@ jobs:
           git clone https://github.com/Casper-242464/ConvertedProtosRepo.git
           
           # Ensure the target directories exist
-          mkdir -p ap2-apis-gen-user-service/base/frontend/v1
-          mkdir -p ap2-apis-gen-user-service/service/frontend/customer/v1
+          mkdir -p ConvertedProtosRepo/base/frontend/v1
+          mkdir -p ConvertedProtosRepo/service/frontend/customer/v1
           
           # Clean out old generated Go files (not folders)
-          rm -f ap2-apis-gen-user-service/base/frontend/v1/*.pb.go
-          rm -f ap2-apis-gen-user-service/service/frontend/customer/v1/*.pb.go
+          rm -f ConvertedProtosRepo/base/frontend/v1/*.pb.go
+          rm -f ConvertedProtosRepo/service/frontend/customer/v1/*.pb.go
           
           # Copy generated files into the right folders
-          cp base/frontend/v1/*.pb.go ap2-apis-gen-user-service/base/frontend/v1/
-          cp service/frontend/customer/v1/*.pb.go ap2-apis-gen-user-service/service/frontend/customer/v1/
+          cp base/frontend/v1/*.pb.go ConvertedProtosRepo/base/frontend/v1/
+          cp service/frontend/customer/v1/*.pb.go ConvertedProtosRepo/service/frontend/customer/v1/
           
-          cd ap2-apis-gen-user-service
+          cd ConvertedProtosRepo
           
           git config --global user.name "Casper-242464"
           git config --global user.email "242464@astanait.edu.kz"
